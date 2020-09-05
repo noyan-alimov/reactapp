@@ -30,7 +30,7 @@ export default class App extends Component<Props, State> {
     </div>
 
   get categories(): string[] {
-    return [...testData.map(p => p.category)]
+    return [...new Set(testData.map(p => p.category))]
   }
 
   addToOrder = (product: Product, quantity: number) => {
