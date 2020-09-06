@@ -29,7 +29,7 @@ export default class App extends Component<Props> {
         <BrowserRouter>
           <Switch>
             <Route path='/products' component={ConnectedProductList} />
-            <Route path='order' render={ props => 
+            <Route path='/order' render={ props => 
               <OrderDetails {...props} submitCallback={ () => this.submitCallback(props) } /> } />
             <Route path='/summary/:id' component={Summary} />
             <Redirect to='/products' />
